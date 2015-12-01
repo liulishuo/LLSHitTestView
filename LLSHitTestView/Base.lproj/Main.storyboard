@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="100" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-2y-lvf" userLabel="Hit Test View1" customClass="LLSHitTestView">
+                                <rect key="frame" x="59" y="58" width="240" height="128"/>
+                                <subviews>
+                                    <view alpha="0.80000000000000004" tag="200" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rok-au-74Y" userLabel="Hit Test View2" customClass="LLSHitTestView">
+                                        <rect key="frame" x="28" y="27" width="240" height="128"/>
+                                        <subviews>
+                                            <view alpha="0.80000000000000004" tag="300" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvd-Ks-SWb" userLabel="Hit Test View3" customClass="LLSHitTestView">
+                                                <rect key="frame" x="94" y="24" width="240" height="128"/>
+                                                <subviews>
+                                                    <view alpha="0.80000000000000004" tag="400" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOE-3g-cbJ" userLabel="Hit Test View4" customClass="LLSHitTestView">
+                                                        <rect key="frame" x="22" y="29" width="240" height="128"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="j7Y-NS-K4y" appends="YES" id="4ii-vQ-1Vu"/>
+                                                        </connections>
+                                                    </view>
+                                                </subviews>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="5Hw-JP-rYd" appends="YES" id="oGL-QY-rrz"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2Yr-r6-Qh9" appends="YES" id="bhd-C8-hw1"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zKE-i4-asb" appends="YES" id="f4R-sq-94H"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="view1" destination="zDX-2y-lvf" id="xEd-g6-7jE"/>
+                        <outlet property="view2" destination="rok-au-74Y" id="7e5-qD-HZL"/>
+                        <outlet property="view3" destination="bvd-Ks-SWb" id="wDI-1q-0wl"/>
+                        <outlet property="view4" destination="pOE-3g-cbJ" id="kf9-Ei-8Qu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zKE-i4-asb" userLabel="Tap Gesture Recognizer1">
+                    <connections>
+                        <action selector="tap1:" destination="BYZ-38-t0r" id="EwR-Jh-RtH"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="my0-mg-yqY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2Yr-r6-Qh9" userLabel="Tap Gesture Recognizer2">
+                    <connections>
+                        <action selector="tap2:" destination="BYZ-38-t0r" id="5Sf-8A-J7E"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="uxb-vc-yrd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="j7Y-NS-K4y" userLabel="Tap Gesture Recognizer4">
+                    <connections>
+                        <action selector="tap4:" destination="BYZ-38-t0r" id="Cer-Vb-YeT"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Cac-Sx-D7i"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5Hw-JP-rYd" userLabel="Tap Gesture Recognizer3">
+                    <connections>
+                        <action selector="tap3:" destination="BYZ-38-t0r" id="Dl8-Ef-Uhe"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="XOD-t4-tvt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
