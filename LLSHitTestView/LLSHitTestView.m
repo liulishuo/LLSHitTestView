@@ -12,6 +12,7 @@
 
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
+    
     UIView *view = [super hitTest:point withEvent:event];
     
     if(_hitTestType == LLSHitTestTypeIgnore)
@@ -35,6 +36,16 @@
         view = tempView;
     }
     
+    //是否需要指定范围
+    if(_path)
+    {
+        if(!CGPathContainsPoint(_path.CGPath, NULL, point, NO))
+        {
+            return nil;
+        }
+    }
+    
+    
     return view;
 }
 
@@ -45,8 +56,8 @@
     
     __block UIView *subView;
     
-    [view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+    //逆序 由层级最低 也就是最上层的子视图开始
+    [view.subviews enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         //point 从view 转到 obj中
         CGPoint hitPoint = [obj convertPoint:point fromView:view];
         //        NSLog(@"%@ - %@",NSStringFromCGPoint(point),NSStringFromCGPoint(hitPoint));

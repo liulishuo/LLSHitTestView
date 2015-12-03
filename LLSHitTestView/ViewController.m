@@ -25,10 +25,23 @@
     
     _view1.hitTestType = LLSHitTestTypeNoClip;
     
-    _view1.code = 1;
-    _view2.code = 2;
-    _view3.code = 3;
-    _view4.code = 4;
+//    _view2.hitTestType = LLSHitTestTypeIgnore;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    CGPoint pointStart = CGPointMake(_view4.frame.size.width/2, _view4.frame.size.height/3);
+    CGPoint pointEnd = CGPointMake(_view4.frame.size.width/2, _view4.frame.size.height);
+    CGPoint controlPoint1 = CGPointMake(_view4.frame.size.width, 0);
+    CGPoint controlPoint4 = CGPointMake(0, 0);
+    CGPoint controlPoint5 = CGPointMake(_view4.frame.size.width, _view4.frame.size.height/2);
+    CGPoint controlPoint6 = CGPointMake(0, _view4.frame.size.height/2);
+    
+    [path moveToPoint:pointStart];
+    [path addCurveToPoint:pointEnd controlPoint1:controlPoint1 controlPoint2:controlPoint5];
+    [path addCurveToPoint:pointStart controlPoint1:controlPoint6 controlPoint2:controlPoint4];
+    
+//    _view4.path = path;
+    
     
 }
 

@@ -26,8 +26,8 @@
                                             <view alpha="0.80000000000000004" tag="300" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvd-Ks-SWb" userLabel="Hit Test View3" customClass="LLSHitTestView">
                                                 <rect key="frame" x="94" y="24" width="240" height="128"/>
                                                 <subviews>
-                                                    <view alpha="0.80000000000000004" tag="400" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOE-3g-cbJ" userLabel="Hit Test View4" customClass="LLSHitTestView">
-                                                        <rect key="frame" x="22" y="29" width="240" height="128"/>
+                                                    <view userInteractionEnabled="NO" alpha="0.80000000000000004" tag="400" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOE-3g-cbJ" userLabel="Hit Test View4" customClass="LLSHitTestView">
+                                                        <rect key="frame" x="-157" y="15" width="240" height="128"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <gestureRecognizers/>
